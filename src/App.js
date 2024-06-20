@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Module from './components/Module';
+import './App.css';  // Import App.css here
 
 function App() {
+  const [modules, setModules] = useState([]);
+
+  const addModule = () => {
+    const newModule = { id: Date.now(), name: 'New Module', resources: [] };
+    setModules([...modules, newModule]);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Course Builder</h1>
+        <button onClick={addModule}>Add Module</button>
       </header>
+      <div className="modules">
+        {modules.map((module) => (
+          <Module key={module.id} module={module} setModules={setModules} modules={modules} />
+        ))}
+      </div>
     </div>
   );
 }
