@@ -12,7 +12,7 @@ const LinkAdder = ({ addResource }) => {
   };
 
   return (
-    <div>
+    <div className="link">
       <input
         type="text"
         value={link}
