@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Course Builder</h1>
-        <button onClick={addModule}>Add Module</button>
+        <button className="btn" onClick={addModule}>Add Module</button>
       </header>
       <div className="modules">
         {modules.map((module) => (
