@@ -3,25 +3,40 @@
 .App {
   font-family: Arial, sans-serif;
   padding: 20px;
+  border: solid white 3px;
+  
 }
 
 .App-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-size: 50px;
 }
+.btn{
+ font-size:20px;
+ margin:13px;
+ border: solid white 1.5px;
+}
+.btn:hover{
+  font-size:25px;
+  color:black;
+}
+
 
 .modules {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* Add gap between modules */
+  gap: 20px; 
+  font-size: 30px;
+  
 }
 
 .module {
-  border: 1px solid #ccc;
+  border: 1px solid white;
   padding: 10px; /* Add padding to the whole module */
   margin: 10px;
-  width: 300px;
+  width: 700px;
 }
 
 .module-header {
@@ -31,11 +46,13 @@
 }
 
 .module-content {
-  padding: 10px; /* Add padding to the content within the module */
+  padding: 10px;
+  font-size: 20px; /* Add padding to the content within the module */
 }
 
 .resources {
   margin-top: 10px;
+  
 }
 
 .resource {
@@ -43,11 +60,95 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px; /* Increased padding for more space inside the resource box */
-  border: 1px solid #ccc;
+  border: 1px solid white;
   margin-top: 10px; /* Increased margin to add more spacing between resource elements */
+ 
 }
 
 .resource-actions {
   display: flex;
   gap: 5px;
+
+}
+.link{
+  margin-left:15px;
+  font-size:15px;
+  
+}
+
+
+@media only screen and (max-width: 600px) {
+  .App-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+  }
+  .btn{
+   font-size:7px;
+   margin:5px;
+   border: solid white 1.5px;
+  }
+  .btn:hover{
+    font-size:10px;
+    color:black;
+  }
+  
+  
+  .modules {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px; 
+    font-size: 10px;
+    
+  }
+  
+  .module {
+    border: 1px solid white;
+    padding: 5px; /* Add padding to the whole module */
+    margin: 5px;
+    width: 300px;
+  }
+  
+  .module-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .module-content {
+    padding: 5px;
+    font-size: 5px; /* Add padding to the content within the module */
+  }
+  
+  .resources {
+    margin-top: 10px;
+    font-size:5px;
+    gap:2px;
+    
+  }
+  
+  .resource {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px; /* Increased padding for more space inside the resource box */
+    border: 1px solid white;
+    margin-top: 10px; /* Increased margin to add more spacing between resource elements */
+   
+  }
+  
+  .resource-actions {
+    display: flex;
+    gap: 2px;
+  
+  }
+  .link{
+    margin-left:0px;
+    width:10px;
+    gap:0px;
+  }
+  .link input{
+    width:10px;
+  }
 }
